@@ -1,0 +1,20 @@
+CXX = mingw8
+CXXFLAGS = -W -Wall -Wno-unused-result -O3 -std=c++2a
+
+.SUFFIXES: .o .cpp
+all: main
+
+OBJECTS = main.o 
+
+main: $(OBJECTS)
+	@echo "Building" $@
+	@$(CXX) -o $@ $? $(CXXFLAGS)
+
+$(OBJECTS): main.cpp
+	@echo "Compiling" $? 
+	@$(CXX) -o $@ -c $? $(CXXFLAGS)
+
+.phony: clean 
+clean:
+	@echo "Cleaning"
+	@del /f $(OBJECTS) main
