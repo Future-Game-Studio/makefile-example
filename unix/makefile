@@ -5,13 +5,13 @@ CXXFLAGS = -W -Wall -Wno-unused-result -O3 -std=c++2a
 
 all: main
 
-OBJECTS = main.o 
+OBJECTS = main.o
 
 main: $(OBJECTS)
 	@echo "Building" $@
 	@$(CXX) -o $@ $^ $(CXXFLAGS)
 
-%.o: $(SOURCES)
+main.o: $(SOURCES)
 	@echo "Compiling" $<
 	@$(CXX) -o $@ -c $< $(CXXFLAGS)
 
