@@ -1,4 +1,4 @@
-CXX ?= mingw
+CXX ?= g++
 CXXFLAGS = -W -Wall -Wno-unused-result -O3 -std=c++2a
 
 all: main
