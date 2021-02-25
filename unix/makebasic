@@ -1,0 +1,7 @@
+include ../shared/shared.opt
+
+all: log
+
+log:
+	@echo "we are using -" $(MAKE)
+	-@rm -f nonexistent.log || true;

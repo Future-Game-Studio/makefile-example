@@ -1,3 +1,5 @@
+include ../shared/shared.opt
+
 CXX ?= g++
 CXXFLAGS = -W -Wall -Wno-unused-result -O3 -std=c++2a
 
@@ -9,7 +11,7 @@ main: $(OBJECTS)
 	@echo "Building" $@
 	@$(CXX) -o $@ $^ $(CXXFLAGS)
 
-%.o: %.cpp
+%.o: $(SOURCES)
 	@echo "Compiling" $<
 	@$(CXX) -o $@ -c $< $(CXXFLAGS)
 

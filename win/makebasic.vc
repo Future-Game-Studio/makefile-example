@@ -1,0 +1,8 @@
+!INCLUDE ..\shared\shared.opt
+
+
+all: log
+
+log:
+	@echo $(MAKE)
+	-@del /q nonexistent.log >nul 2>&1

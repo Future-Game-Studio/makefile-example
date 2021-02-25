@@ -1,3 +1,5 @@
+!INCLUDE ..\shared\shared.opt
+
 CXX = mingw8
 CXXFLAGS = -W -Wall -Wno-unused-result -O3 -std=c++2a
 
@@ -10,7 +12,7 @@ main: $(OBJECTS)
 	@echo "Building" $@
 	@$(CXX) -o $@ $? $(CXXFLAGS)
 
-$(OBJECTS): main.cpp
+$(OBJECTS): $(SOURCES)
 	@echo "Compiling" $? 
 	@$(CXX) -o $@ -c $? $(CXXFLAGS)
 
