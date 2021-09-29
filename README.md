@@ -12,3 +12,6 @@ https://en.cppreference.com/w/cpp/20
 
 MinGW64 Compiler for Windows
 http://winlibs.com/
+
+Cheet sheet
+http://www.csl.mtu.edu/cs1129/www/content/slides/custom_slides/makefiles/makefiles_2pps.pdf
